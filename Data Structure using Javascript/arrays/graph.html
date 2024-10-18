@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title> Graph in Javascript</title>
+</head>
+
+<body>
+
+    <script>
+
+        class Graph {
+            constructor(noofvertices) {
+                this.noofvertices = noofvertices;
+                this.adjlist = new Map();
+            }
+
+            addvertex(v) {
+                this.adjlist.set(v, []);
+            }
+
+            addedge(v, w) {
+                this.adjlist.get(v).push(w);
+                this.adjlist.get(w).push(v);
+            }
+
+            display() {
+                var getkeys = this.adjlist.keys();
+
+                for (var i of getkeys) {
+
+                    var getdata = this.adjlist.get(i);
+                    var concatenate = "";
+
+                    for (var j of getdata) {
+                        concatenate += j + " ";
+                        console.log(i + " -> " + concatenate);
+                    }
+                }
+            }
+
+
+            bfs(startnode) {
+
+                var visited = {};
+
+                var q = new Queue();
+
+                visited[startnode] = true;
+                q.enqueue(startnode);
+
+                while (!q.isEmpty()) {
+
+                    var getelement = q.dequeue();
+
+                    console.log(getelement);
+
+                    var getlist = this.adjlist.get(getelement);
+
+                    for (var i in getlist) {
+                        var neighbour = getlist[i];
+
+                        if (!visited[neighbour]) {
+                            visited[neighbour] = true;
+                            q.enqueue(neighbour);
+                        }
+                    }
+                }
+            }
+
+            dfs(startnode) {
+                var visited = {};
+                this.dfselement(startnode, visited);
+            }
+            dfselement(vertex, visited) {
+                visited[vertex] = true;
+                console.log(vertex);
+
+                var neighbours = this.adjlist.get(vertex);
+
+                for (var i in neighbours) {
+                    var getelement = neighbours[i];
+
+                    if (!visited[getelement])
+                        this.dfselement(getelement, visited);
+                }
+
+            }
+
+
+
+
+        }
+        var g = new Graph(6);
+
+        var vertices = ['A', 'B', 'C', 'D', 'E', 'F'];
+
+        for (var i = 0; i < vertices.length; i++) {
+            g.addvertex(vertices[i]);
+        }
+
+        g.addedge('A', 'B');
+        g.addedge('A', 'D');
+        g.addedge('A', 'E');
+        g.addedge('B', 'C');
+        g.addedge('D', 'E');
+        g.addedge('E', 'F');
+        g.addedge('E', 'C');
+        g.addedge('C', 'F');
+
+        g.display();
+
+        g.bfs('A');
+
+        g.dfs('A');
+    </script>
+</body>
+
+</html>

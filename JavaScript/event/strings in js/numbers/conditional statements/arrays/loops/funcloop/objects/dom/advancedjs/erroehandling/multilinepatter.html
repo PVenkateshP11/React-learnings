@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript Match a Pattern in a Multiline String Using Regular Expression</title>
+</head>
+
+<body>
+    <script>
+        var str = "Color red is more visible than \ncolor blue in daylight.";
+        var regex1 = /^color/gi;
+        var regex2 = /^color/gim;
+        var matches = str.match(regex1); // pattern matching without multiline flag
+        document.write("<p>Found " + matches.length + " matches: " + matches + "</p>");
+        console.log(matches);
+        matches = str.match(regex2); // pattern matching with multiline flag
+        document.write("<p>Found " + matches.length + " matches: " + matches + "</p>");
+        console.log(matches);
+    </script>
+</body>
+
+</html>

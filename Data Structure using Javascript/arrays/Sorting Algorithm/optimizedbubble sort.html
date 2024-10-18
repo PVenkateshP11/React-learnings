@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Optimized Bubble Sort</title>
+</head>
+
+<body>
+    <script>
+        //optimized bubble sort
+        
+        function bubblesort(array) {
+
+            var i, j;
+            var len = array.length;
+            var isswapped = false;
+            for (i = 0; i < len; i++) {
+                isswapped = false;
+                for (j = 0; j < len; j++) {
+                    if (array[j] > array[j + 1]) {
+                        var temp = array[j];
+                        array[j] = array[j + 1];
+                        array[j + 1] = temp;
+                        isswapped = true;
+                    }
+                }
+                if (!isswapped) {
+                    break;
+                }
+            }
+            console.log(array);
+        }
+        var array = [23, 152, 26, 14, -5, 0, 28];
+        bubblesort(array)
+    </script>
+</body>
+
+</html>

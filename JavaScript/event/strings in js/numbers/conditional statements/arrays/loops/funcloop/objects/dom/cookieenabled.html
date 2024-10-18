@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript Check If Cookies Are Enabled</title>
+</head>
+
+<body>
+    <script>
+        function checkCookieEnabled() {
+            if (navigator.cookieEnabled) {
+                alert("Cookies are enabled in your browser.");
+            } else {
+                alert("Cookies are disabled in your browser.");
+            }
+        }
+    </script>
+
+    <button type="button" onclick="checkCookieEnabled();">Check If Cookies are Enabled</button>
+</body>
+
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>DSA in Javascript</title>
+</head>
+
+<body>
+    <script>
+
+        class QElement {
+            constructor(element, priority) {
+                this.element = element;
+                this.priority = priority;
+            }
+        }
+
+        class PriorityQueue {
+            constructor() {
+                this.items = [];
+            }
+
+            enqueue(element, priority) {
+                var data = new QElement(element, priority);
+                var contain = false;
+
+                for (var i = 0; i < this.items.length; i++) {
+                    if (this.items[i].priority > data.priority) {
+                        this.items.splice(i, 0, data);
+                        contain = true;
+                        break;
+                    }
+                }
+                if (!contain) {
+                    this.items.push(data);
+                }
+
+            }
+
+
+            dequeue() {
+                if (this.isEmpty())
+                    return "Underflow";
+                return this.items.shift();
+            }
+
+            front() {
+                if (this.isEmpty())
+                    return "No elements present in Q";
+
+                return this.items[0];
+            }
+
+
+            rear() {
+                if (this.isEmpty())
+                    return "No elements present in Q";
+
+                return this.items[this.items.length - 1];
+
+            }
+
+            isEmpty() {
+                return this.items.length == 0;
+            }
+
+
+            display() {
+                var str = " ";
+                for (var i = 0; i < this.items.length; i++) {
+                    str += this.items[i].element + " ";
+                }
+                return str;
+            }
+        }
+
+        var pq = new PriorityQueue();
+
+        console.log(pq.isEmpty());
+        console.log(pq.front());
+
+        pq.enqueue("Talent", 2);
+        pq.enqueue("Battle", 1);
+        pq.enqueue("FSD", 1);
+        pq.enqueue("Ameya", 3);
+        pq.enqueue("Vishwajeet", 4);
+
+        console.log(pq.display());
+
+        console.log(pq.front());
+        console.log(pq.rear());
+
+
+        console.log(pq.dequeue());
+        console.log(pq.dequeue());
+
+        console.log(pq.front());
+        console.log(pq.rear());
+
+        console.log(pq.enqueue("Rohit", 1));
+
+        console.log(pq.display());
+
+    </script>
+</body>
+
+</html>

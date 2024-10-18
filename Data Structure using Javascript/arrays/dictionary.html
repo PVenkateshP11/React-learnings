@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Dictionary in Javascript</title>
+</head>
+
+<body style="text-align: center;">
+    <h1 style="color: green;">
+        Dictionary
+    </h1>
+    <p>
+        var dict = { <br />
+        "talent" : 1 , <br />
+        "battle" : "2", <br />
+        "fsd" : 3.5 <br />
+        }; <br />
+    </p>
+    <button onClick="fun()">
+        Add new Key-Value Pairs
+    </button>
+    <p id="demo"></p>
+    <!-- Script to create dictionary
+and add key-value pairs -->
+    <script>
+        function fun() {
+            var dict = {
+                html: 1,
+                css: "2",
+                javascript: 3.5,
+            };
+            dict.new = "new_value";
+            dict["another_new_value"] =
+                "another_value";
+            var to_show = "var dict = { <br>";
+            for (var key in dict) {
+                to_show += '"' + key + '" : '
+                    + dict[key] + "<br>";
+            }
+            to_show += " }; <br>";
+            document.getElementById("demo")
+                .innerHTML = to_show;
+        }
+    </script>
+</body

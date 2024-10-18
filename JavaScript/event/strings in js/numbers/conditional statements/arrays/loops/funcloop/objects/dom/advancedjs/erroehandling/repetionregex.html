@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Split a String Using Regular Expression in JavaScript</title>
+</head>
+
+<body>
+    <script>
+        var regex = /[\s,]+/;
+        var str = "My favourite colors are red, green and blue";
+        var parts = str.split(regex);
+        console.log(parts);
+        // Loop through parts array and display substrings
+        for (var part of parts) {
+            document.write("<p>" + part + "</p>");
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript Removing an Event Listener</title>
+</head>
+
+<body>
+    <button id="myBtn">Click Me</button>
+    <script>
+        function greetWorld() {
+            alert("Hello World!");
+        }
+        var btn = document.getElementById("myBtn");
+        btn.addEventListener("click", greetWorld);
+        btn.removeEventListener("click", greetWorld);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript Grouping Sub-expressions in a Regular Expression</title>
+</head>
+
+<body>
+    <script>
+        var str = "One day Gogo will go to school.";
+        var regex1 = /(go)+/i;
+        var regex2 = /(go)+/gi;
+
+        var matches = str.match(regex1); // case-insensitive match
+        console.log(matches);
+        // expected output: ["Gogo", "go", index: 8, ...]
+
+        matches = str.match(regex2); // global, case-insensitive match
+        console.log(matches);
+        // expected output: ["Gogo", "go"]
+    </script>
+    <p><strong>Note:</strong> Please check out the browser console by pressing the f12 key on the keyboard.</p>
+</body>
+
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript Check If Browser is Java Enabled</title>
+</head>
+
+<body>
+    <script>
+        function checkJavaEnabled() {
+            if (navigator.javaEnabled()) {
+                alert("Your browser is Java enabled.");
+            } else {
+                alert("Your browser is not Java enabled.");
+            }
+        }
+    </script>
+
+    <button type="button" onclick="checkJavaEnabled();">Check If Java is Enabled</button>
+</body>
+
+</html>

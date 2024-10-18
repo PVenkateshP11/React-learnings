@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Parse JSON Array in JavaScript</title>
+</head>
+
+<body>
+    <script>
+        /* Storing multi-line JSON string in a JS variable
+        using the new ES6 template literals */
+        var json = `{
+"fruits": [
+"Apple",
+"Banana",
+"Strawberry",
+"Mango"
+]
+}`;
+        // Converting JSON object to JS object
+        var obj = JSON.parse(json);
+        console.log(obj);
+    </script>

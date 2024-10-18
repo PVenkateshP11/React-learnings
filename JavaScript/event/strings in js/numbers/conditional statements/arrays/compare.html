@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript Sort a Numeric Array Correctly Using Compare Function</title>
+</head>
+
+<body>
+    <script>
+        var numbers = [5, 20, 10, 75, 50, 100];
+        // Sorting an array using compare function
+        numbers.sort(function (a, b) {
+            return a - b;
+        });
+        document.write(numbers); // Prints: 5,10,20,50,75,100
+    </script>
+</body>
+
+</html>

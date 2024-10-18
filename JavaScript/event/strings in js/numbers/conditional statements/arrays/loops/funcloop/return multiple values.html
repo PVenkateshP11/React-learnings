@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript Return Multiple Values from a Function</title>
+</head>
+
+<body>
+    <script>
+        // Defining function
+        function divideNumbers(dividend, divisor) {
+            var quotient = dividend / divisor;
+            var arr = [dividend, divisor, quotient];
+            return arr;
+        }
+        // Store returned value in a variable
+        var all = divideNumbers(10, 2);
+        // Displaying individual values
+        document.write(all[0] + "<br>"); // Prints: 10
+        document.write(all[1] + "<br>"); // Prints: 2
+        document.write(all[2]); // Prints: 5
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript Find and Replace Characters in a String Using Regular Expression</title>
+</head>
+
+<body>
+    <script>
+        var regex = /\s/g;
+        var replacement = "-";
+        var str = "Earth revolves around\nthe\tSun";
+        // Printing original string
+        document.write("<pre>" + str + "</pre>");
+        // Replace spaces, newlines and tabs
+        document.write("<pre>" + str.replace(regex, replacement) + "</pre>");
+        // Replace only spaces
+        document.write("<pre>" + str.replace(/ /g, "-") + "</pre>");
+    </script>
+</body>
+
+</html>

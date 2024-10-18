@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript Match the Pattern in a Case-insensitive Manner Using Regular Expression</title>
+</head>
+
+<body>
+    <script>
+        var str = "Color red is more visible than color blue in daylight.";
+        var regex1 = /color/g;
+        var regex2 = /color/gi;
+        var matches = str.match(regex1); // pattern matching without ignore case flag
+        document.write("<p>Found " + matches.length + " matches: " + matches + "</p>");
+        console.log(matches);
+        matches = str.match(regex2); // pattern matching with ignore case flag
+        document.write("<p>Found " + matches.length + " matches: " + matches + "</p>");
+        console.log(matches);
+    </script>
+</body>
+
+</html>

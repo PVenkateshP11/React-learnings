@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript Split a String Into an Array of Characters</title>
+</head>
+
+<body>
+    <script>
+        var str = "TALENTBATTLE";
+        var strArr = str.split("");
+        document.write(strArr[0] + "<br>");
+        document.write(strArr[1] + "<br>");
+        document.write(strArr[strArr.length - 1]);
+        document.write("<hr>");
+        // Loop through all the elements of the characters array and print them
+        for (var i in strArr) {
+            document.write("<br>" + strArr[i]);
+        }
+    </script>
+</body>
+
+</html>

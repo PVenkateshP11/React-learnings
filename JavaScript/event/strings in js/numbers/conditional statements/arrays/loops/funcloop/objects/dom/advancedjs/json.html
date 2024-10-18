@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Parse JSON Object in JavaScript</title>
+</head>
+
+<body>
+    <script>
+        /* Storing multi-line JSON string in a JS variable
+        using the new ES6 template literals */
+        var json = `{
+"book": {
+"name": "Harry Potter and the Goblet of Fire",
+"author": "J. K. Rowling",
+"year": 2000,
+"genre": "Fantasy Fiction",
+"bestseller": true
+}
+}`;
+        // Converting JSON object to JS object
+        var obj = JSON.parse(json);
+        console.log(obj);
+    </script>
+    <p><strong>Note:</strong> Please check out the browser console by pressing the f12 key on the keyboard.</p>
+</body>
+
+</html>

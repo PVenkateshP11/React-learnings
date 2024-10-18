@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Factorial of a number</title>
+</head>
+<body>
+    <script>
+        function Factorial(number){
+            if (number == 1){
+                return number;
+            }
+            else {
+                return number*Factorial(number-1);
+            
+            }
+        }
+        document.write(Factorial(5));
+    </script>
+    
+</body>
+</html>

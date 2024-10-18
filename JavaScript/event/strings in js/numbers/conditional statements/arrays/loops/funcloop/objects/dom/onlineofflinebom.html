@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript Detect If Browser is Online or Offline</title>
+</head>
+
+<body>
+    <script>
+        function checkConnectionStatus() {
+            if (navigator.onLine) {
+                alert("Application is online.");
+            } else {
+                alert("Application is offline.");
+            }
+        }
+    </script>
+
+    <button type="button" onclick="checkConnectionStatus();">Check Connection Status</button>
+</body>
+
+</html>

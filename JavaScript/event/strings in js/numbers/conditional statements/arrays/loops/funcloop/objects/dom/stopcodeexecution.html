@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript Cancel a Timer with clearTimeout() Method</title>
+</head>
+
+<body>
+    <script>
+        var timeoutID;
+
+        function delayedAlert() {
+            timeoutID = setTimeout(showAlert, 2000);
+        }
+
+        function showAlert() {
+            alert('This is a JavaScript alert box.');
+        }
+
+        function clearAlert() {
+            clearTimeout(timeoutID);
+        }
+    </script>
+
+    <button onclick="delayedAlert();">Show Alert After Two Seconds</button>
+
+    <button onclick="clearAlert();">Cancel Alert Before It Display</button>
+</body>
+
+</html>

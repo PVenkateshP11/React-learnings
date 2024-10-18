@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>DSA in Javascript</title>
+</head>
+
+<body>
+    <script>
+
+
+        class Queue {
+            constructor() {
+                this.items = [];
+            }
+
+            enqueue(element) {
+                return this.items.push(element);
+            }
+
+            dequeue() {
+                if (this.items.length > 0) {
+                    return this.items.shift();
+                }
+            }
+
+            peek() {
+                return this.items[this.items.length - 1];
+            }
+
+            isEmpty() {
+                return this.items.length == 0;
+            }
+
+            size() {
+                return this.items.length;
+            }
+
+            clear() {
+                this.items = [];
+            }
+        }
+
+        let obj = new Queue();
+        obj.enqueue(10);
+        obj.enqueue(20);
+        obj.enqueue(30);
+        obj.enqueue(40);
+        obj.enqueue(50);
+
+        document.write(obj.items);
+        document.write("<br>");
+
+        obj.dequeue();
+        document.write(obj.items);
+        document.write("<br>");
+
+        document.write(obj.peek());
+        document.write("<br>");
+
+        document.write(obj.isEmpty());
+        document.write("<br>");
+
+        document.write(obj.size());
+        document.write("<br>");
+
+        obj.clear()
+        document.write(obj.items);
+        document.write("<br>");
+
+    </script>
+</body>
+
+</html>

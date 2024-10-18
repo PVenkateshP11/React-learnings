@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title> Insertion Sort in Javascript</title>
+</head>
+
+<body>
+
+    <script>
+
+        function insertionsort(array, n) {
+            let i, j, key;
+            for (i = 1; i < n; i++) {
+                key = array[i];
+                j = i - 1;
+                while (j >= 0 && array[j] > key) {
+                    array[j + 1] = array[j];
+                    j = j - 1;
+                }
+                array[j + 1] = key;
+            }
+        }
+        function display(array, n) {
+            let i;
+            for (i = 0; i < n; i++) {
+                document.write(array[i] + " ");
+            }
+            document.write("<br>");
+        }
+        let array = [9, 5, 1, 4, 3];
+        let n = array.length;
+
+        insertionsort(array, n);
+        display(array, n);
+
+
+
+    </script>
+</body>
+
+</html>

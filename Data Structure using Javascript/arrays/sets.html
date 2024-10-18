@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Sets in Javascript</title>
+	</head>
+	<body>
+
+		<script>
+		
+    var set1 = new Set(["talent","battle","Ameya","Vishwajeet","Harsh","battle"]);
+    var set2 = new Set("gooooooooooood");
+    var set3 = new Set([10,20,30,40,40,50,50]);
+    var set4 = new Set();
+    console.log(set1);
+    document.write("<br>");
+    console.log(set2);document.write("<br>");
+    console.log(set3);
+    document.write("<br>");
+    console.log(set4);
+    document.write("<br>");
+
+
+      var set1=new Set();
+      set1.add(100);
+      set1.add(200);
+      set1.add(200);
+
+      console.log(set1);
+
+      set1.add(300).add(400).add(500);
+
+      console.log(set1);
+
+
+
+var set1 = new Set("goooooooooooood");
+console.log(set1.delete('o'));  //true
+console.log(set1); 
+console.log(set1.delete('r'));  //false
+
+
+      var set1 = new Set([10,20,30,44,40,40,40,50]);
+      console.log(set1);
+      set1.clear();
+      console.log(set1);
+
+
+
+      var set1 = new Set();
+
+      set1.add(50);
+      set1.add(40);
+      set1.add(30);
+      set1.add(20);
+      set1.add(10);
+
+
+      var getelement = set1.entries();
+
+      console.log(getelement.next().value);
+      console.log(getelement.next().value);
+      console.log(getelement.next().value);
+
+
+
+      var set1 = new Set();
+
+      set1.add(100);
+      set1.add("Talent");
+
+      console.log(set1.has("Talent"));
+      console.log(set1.has(500));
+
+
+
+      Set.prototype.union = function(otherSet){
+        var unionSet = new Set();
+
+        for(var element of this){
+          unionSet.add(element);
+        }
+
+        for(var element of otherSet)
+          unionSet.add(element);
+
+        return unionSet;
+      }
+
+
+      var set1 = new Set([1,2,3,4,5]);
+      var set2 = new Set([4,5,6,7,8]);
+
+      var unionSet = set1.union(set2);
+
+      console.log(unionSet.values());
+
+
+
+Set.prototype.intersection = function(otherSet){
+        var intersectionSet = new Set();
+
+        for(var element of otherSet){
+          
+          if(this.has(element))
+            intersectionSet.add(element);
+        }
+
+
+        return intersectionSet;
+      }
+
+
+      var set1 = new Set([1,2,3,4,5]);
+      var set2 = new Set([4,5,6,7,8]);
+
+      var intersectionSet = set1.intersection(set2);
+
+      console.log(intersectionSet.values());
+
+
+
+Set.prototype.difference = function(otherSet){
+        var differenceSet = new Set();
+
+        for(var element of this){
+          if(!otherSet.has(element))
+            differenceSet.add(element);
+        }
+
+
+        return differenceSet;
+      }
+
+
+      var set1 = new Set([1,2,3,4,5]);
+      var set2 = new Set([4,5,6,7,8]);
+
+      var differenceSet = set2.difference(set1);
+
+      console.log(differenceSet);
+
+
+
+
+
+    </script>
+	</body>
+</html>		

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript Copy by Reference</title>
+</head>
+
+<body>
+    <script>
+        var person = {
+            name: "Talent",
+            age: 30,
+            gender: "Male"
+        };
+        var user = person; // Assign person variable to a new variable
+        user.name = "Battle";
+        document.write(person.name + "<br>");
+        document.write(user.name);
+    </script>
+</body>
+
+</html>
